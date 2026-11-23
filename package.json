@@ -1,0 +1,43 @@
+{
+  "name": "listed",
+  "version": "0.0.1",
+  "description": "Simple shopping list exercise for interview",
+  "homepage": "https://github.com/PJLevitt1977/listed#readme",
+  "bugs": {
+    "url": "https://github.com/PJLevitt1977/listed/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PJLevitt1977/listed.git"
+  },
+  "license": "MIT",
+  "author": "Paul Levitt <hello@paullevitt.dev>",
+  "type": "module",
+  "source": [
+    "src/index.html"
+  ],  
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel --port 3000 --open",
+    "build": "parcel build --no-source-maps && cp -R static/. dist/",
+    "clean": "rm -rf dist .parcel-cache",
+    "rebuild": "npm run clean && npm run build",
+    "serve": "npx --yes serve dist"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.16.4",
+    "@parcel/transformer-jsonld": "^2.16.4",
+    "@parcel/transformer-webmanifest": "^2.16.4",
+    "parcel": "^2.12.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
